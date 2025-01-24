@@ -4,6 +4,12 @@ const cors = require("cors");
 const sequelize = require('./config/database');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors({
+  origin: '*',
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
+
 sequelize
   .authenticate()
   .then(() => console.log("Database connected successfully."))
