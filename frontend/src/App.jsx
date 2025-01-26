@@ -1,14 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/home";
+import Scrap from "./pages/Scrap";
+import Rss from "./pages/Rss";
+import AllRss from "./pages/AllRss";
 
 function App() {
-
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Scrap />} />
+          <Route path="/Rss" element={<Rss />} />
+          <Route path="/allRss" element={<AllRss />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
