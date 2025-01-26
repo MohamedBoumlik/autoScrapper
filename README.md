@@ -65,10 +65,12 @@ Configure the backend:
 Set up a .env file in the backend folder with the following variables:
 env
 
-
-PORT=8889  
-DATABASE_URL=<your-database-url>  
-RSS_FETCH_CRON_TIME="0 8 * * *"  
+DB_HOST="Your host"
+DB_PORT=8889
+DB_NAME="DB Name"
+DB_USER="DB User"
+DB_PASSWORD="DB PW"
+PORT=3000
 Start the application:
 
 Backend:
